@@ -108,7 +108,8 @@ def pair_even_team(team):
 def write_pairings(team, name, num_weeks):
     with open(name, 'w+') as csvfile:
         for i in range(num_weeks):
-            csvfile.write(",Week {0}".format(num_weeks))
+            csvfile.write(",Week {0}".format(i))
+        csvfile.write("\n")
         for member in team:
             csvfile.write(member.to_csv())
 
